@@ -15,6 +15,7 @@ if (isset($_GET['logout'])) {
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
@@ -56,6 +57,7 @@ if (isset($_GET['logout'])) {
 						<br>
 						<a href="home.php?logout='1'" style="color: red;">logout</a>
                        &nbsp; <a href="create_user.php"> + add user</a>
+                        &nbsp; <a href="add_questions.php"> + add questions</a>
 					</small>
 
 				<?php endif ?>

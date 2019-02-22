@@ -3,6 +3,7 @@ session_start();
 
 // connect to database
 $db = mysqli_connect('localhost', 'root', '', 'registration');
+mysqli_set_charset($db,"utf8");
 
 // variable declaration
 $username = "";
@@ -165,3 +166,5 @@ function isAdmin()
     return false;
   }
 }
+?>
+

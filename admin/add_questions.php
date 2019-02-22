@@ -2,6 +2,7 @@
 <?php include('../functions.php');
 		if(isset($_POST['submit'])) {
 			//get post variable
+			$question_number = $_POST['question_number'];
 			$question_text = $_POST['question_text'];
 			$correct_choice = $_POST['correct_choice'];
 
@@ -13,8 +14,8 @@
 			
 			//question query
 
-			$query = "INSERT INTO questions (question_text)
-							values('$question_text')";
+			$query = "INSERT INTO questions (question_number, question_text)
+							values('$question_number', '$question_text')";
 
 			//run query
 
@@ -31,8 +32,11 @@
 						}
 
 						//choice query
-						$query = "INSERT INTO answers (is_correct, answer_text)
-						VALUES ('$is_correct', '$value')";
+						$query = "INSERT INTO answers (question_number, is_correct, answer_text)
+						VALUES ('$question_number', '$is_correct', '$value')"; 
+
+						
+					
 
 
 						//run query
@@ -44,6 +48,18 @@
 				}
 				$msg = 'Question has been added';
 			}
+
+			//get total questions
+
+			$query = "SELECT * FROM 'questions'";
+
+			//get result
+mysqli_query($db, $query);
+
+			 //	$questions = $mysqli->query($query);
+
+			//$total = $question->num_rows;
+			$next = $question_number+1;
 		
 ?>
 <!DOCTYPE html>
@@ -70,6 +86,11 @@
 
 			?>
 			<form accept-charset="utf-8" method="post" action="add_questions.php">
+				<p>
+					<label>Broj pitanja</label>
+					<input type="number" value="<?php echo $next; ?>"  name="question_number">
+				</p>
+
 				<p>
 					<label>Pitanje</label>
 					<input type="text" name="question_text">

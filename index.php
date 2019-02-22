@@ -48,7 +48,7 @@
       </div>
     </div>
   <div class="input-group">
-    <button type="submit" class="btn" name="start_button">Započni kviz</button>
+    <a href="start_quiz.php?n=1" class="start">Započni kviz</a>
   </div>
   </div>
 </body>

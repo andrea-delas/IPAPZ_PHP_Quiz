@@ -42,6 +42,17 @@ form, .content {
   border-radius: 5px;
   border: 1px solid gray;
 }
+.input-group a {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #5F9EA0;
+  border: none;
+  border-radius: 5px;
+}
+.input_group p {
+  font-size: 50px;
+}
 #user_type {
   height: 40px;
   width: 98%;

@@ -1,4 +1,18 @@
 <?php include('functions.php') ?>
+<?php
+// set question number
+
+$number = (int) $_GET['n'];
+
+$query = "SELECT * FROM `questions` WHERE question_number = $number";
+$result = mysqli_query($db, $query);
+$question= mysqli_fetch_assoc($result);
+
+$query = "SELECT * FROM `answers` WHERE question_number = $number";
+$answers = mysqli_query($db, $query);
+
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -17,13 +31,14 @@
 		<div class="container">
 			<div class="current">Pitanje 1 od 10</div>
 			<p class="question">
-				What does PHP stand for?
+			<?php echo $question['question_text'];?>
 			</p>
 			<form method="post" action="process.php">
 				<ul class="answers">
-					<li><input type="radio" name="answer" value="1">PHP: Hypertext Preprocessor</li>
-					<li><input type="radio" name="answer" value="1">PHP: Private Home Page</li>		
-					<li><input type="radio" name="answer" value="1">PHP: Personal Home Page</li>							
+					<?php while ($row = mysqli_fetch_assoc($answers)): ?>
+						<li><input type="radio" name="answer" value="<?php echo $row['answer_id']; ?>"><?php echo $row['answer_text']; ?></li>
+					<?php endwhile; ?>
+										
 				</ul>
 				<input type="submit" value="submit">
 			</form>

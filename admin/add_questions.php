@@ -41,27 +41,36 @@
 
 						//run query
 						mysqli_query($db, $query);
+						
 
 						//validate insert
 						
 					}
 				}
 				$msg = 'Question has been added';
+
+
+
 			}
 
-			//get total questions
 
-			$query = "SELECT * FROM 'questions'";
-
-			//get result
-mysqli_query($db, $query);
-
-			 //	$questions = $mysqli->query($query);
-
-			//$total = $question->num_rows;
-			$next = $question_number+1;
-		
+			
+			$query = "SELECT count(question_number) AS total FROM questions";
+			$result = mysqli_query($db, $query);
+			$values= mysqli_fetch_assoc($result);
+			$num_rows=$values['total'];
+			$next = $num_rows+1;
+			
 ?>
+				
+			
+			
+
+
+
+	
+		
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,7 +97,7 @@ mysqli_query($db, $query);
 			<form accept-charset="utf-8" method="post" action="add_questions.php">
 				<p>
 					<label>Broj pitanja</label>
-					<input type="number" value="<?php echo $next; ?>"  name="question_number">
+					<input type="number" value="<?php echo $next; ?>" name="question_number">
 				</p>
 
 				<p>

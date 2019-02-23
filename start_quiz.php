@@ -1,9 +1,11 @@
+<?php include('functions.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title></title>
-	  <link rel="stylesheet" type="text/css" href="../style.css">
+	  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
@@ -25,9 +27,6 @@
 				</ul>
 				<input type="submit" value="submit">
 			</form>
-
-
-
 
 		</div>
 	</main>

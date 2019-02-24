@@ -48,12 +48,7 @@
 					}
 				}
 				$msg = 'Question has been added';
-
-
-
 			}
-
-
 			
 			$query = "SELECT count(question_number) AS total FROM questions";
 			$result = mysqli_query($db, $query);
@@ -61,15 +56,7 @@
 			$num_rows=$values['total'];
 			$next = $num_rows+1;
 			
-?>
-				
-			
-			
-
-
-
-	
-		
+?>	
 
 <!DOCTYPE html>
 <html>

@@ -1,4 +1,6 @@
+
 <?php include('functions.php') ?>
+
 <?php
 // set question number
 
@@ -29,7 +31,7 @@ $answers = mysqli_query($db, $query);
 	</header>
 	<main>
 		<div class="container">
-			<div class="current">Pitanje 1 od 10</div>
+			<div class="current">Pitanje <?php echo $question['question_number'];?></div>
 			<p class="question">
 			<?php echo $question['question_text'];?>
 			</p>
@@ -41,6 +43,7 @@ $answers = mysqli_query($db, $query);
 										
 				</ul>
 				<input type="submit" value="submit">
+				<input type="hidden" name="number" value="<?php echo $number; ?>">
 			</form>
 
 		</div>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration system PHP and MySQL - Create user</title>
+	 <title>PHP-Quiz</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
 		.header {

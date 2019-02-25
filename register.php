@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Registration system PHP and MySQL</title>
+   <title>PHP-Quiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

@@ -22,7 +22,7 @@ $answers = mysqli_query($db, $query);
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	 <title>PHP-Quiz</title>
 	  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

@@ -16,7 +16,7 @@ if (isset($_GET['logout'])) {
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Home</title>
+	 <title>PHP-Quiz</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
 	.header {

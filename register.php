@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
    <title>PHP-Quiz</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 <div class="header">

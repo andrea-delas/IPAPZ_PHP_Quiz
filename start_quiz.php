@@ -2,7 +2,7 @@
 <?php include('functions.php') ?>
 
 <?php
-// set question number
+// broj pitanja
 
 $number = (int) $_GET['n'];
 

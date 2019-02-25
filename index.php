@@ -40,7 +40,7 @@
   <div class="input-group-home">
     <table>
       <tr><td><strong>Broj pitanja u kvizu</strong></td><td>Kviz ima 10 pitanja.</td></tr>
-      <tr><td><strong>Područje provjere</strong></td><td>PHP programski jeik, operacijski sustav Linux i MySQL</td></tr>
+      <tr><td><strong>Područje provjere</strong></td><td>PHP programski jezik, operacijski sustav Linux i MySQL</td></tr>
         <tr><td><strong>Vrijeme trajanja kviza</strong></td><td>5 minuta</td></tr> 
     </table>
   <div class="start"><a href="start_quiz.php?n=1" style="color: white;">Započni kviz</a></div>

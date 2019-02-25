@@ -32,8 +32,7 @@
     <div class="input-group">
       <button type="submit" class="btn" name="login_btn">Prijavi se</button>
     </div>
-    <p>
-      Nemate korisničko ime? <a href="register.php">Registrirajte se</a>
+    <p>Nemate korisničko ime? <a href="register.php">Registrirajte se</a>
     </p>
   </form>
   </div>

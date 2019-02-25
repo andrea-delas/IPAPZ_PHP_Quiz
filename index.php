@@ -4,7 +4,6 @@
   $_SESSION['msg'] = "You must log in first";
   header('location: login.php');
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,33 +24,16 @@
   
   </div>
   <div class="content-home">
-    <!-- notification message -->
-   <!--  <?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
-        <h3>
-          <?php 
-           // echo $_SESSION['success']; 
-            //unset($_SESSION['success']);
-          ?>
-        </h3>
-      </div>
-    <?php endif ?> -->
-    <!-- logged in user information -->
     <div class="profile_info">
-      <img src="admin/user_profile.jpg"  >
-
-      <div>
+      <img src="admin/user_profile.jpg">
+    <div>
         <?php  if (isset($_SESSION['user'])) : ?>
           <strong><?php echo $_SESSION['user']['username']; ?></strong>
-
           <small>
             <i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
             <br>
             <a href="index.php?logout='1'" style="color: red; font-size: 20px;">odjavi se</a><br>
-        
-
           </small>
-
         <?php endif ?>
       </div>
     </div>
@@ -60,19 +42,11 @@
       <tr><td><strong>Broj pitanja u kvizu</strong></td><td>Kviz ima 10 pitanja.</td></tr>
       <tr><td><strong>Područje provjere</strong></td><td>PHP programski jeik, operacijski sustav Linux i MySQL</td></tr>
         <tr><td><strong>Vrijeme trajanja kviza</strong></td><td>5 minuta</td></tr> 
-        
     </table>
-
-    
   <div class="start"><a href="start_quiz.php?n=1" style="color: white;">Započni kviz</a></div>
-    
   </div>
   <div style="clear: both;"></div>
-  
- 
- 
   </div>
-
 </div>
 </body>
 </html>

@@ -26,35 +26,29 @@ $answers = mysqli_query($db, $query);
 	  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<div class="container">
+		<div class="header-quiz">
 			<h1>PHP Quiz</h1>
 		</div>
-	</header>
-	<main>
-		<div class="container">
-			<div class="current">Pitanje <?php echo $question['question_number'];?></div>
+	
+		<div class="content-quiz">
+			<form class= "content-quiz" method="post" action="process.php">
+			<!-- <div class="current">Pitanje <?php echo $question['question_number'];?></div> -->
 			<p class="question">
 			<?php echo $question['question_text'];?>
 			</p>
-			<form method="post" action="process.php">
+			
 				<ul class="answers">
 					<?php while ($row = mysqli_fetch_assoc($answers)): ?>
-						<li><input type="radio" name="answer" value="<?php echo $row['answer_id']; ?>"><?php echo $row['answer_text']; ?></li>
+						<li><input type="radio" class="answer" name="answer" value="<?php echo $row['answer_id']; ?>"><?php echo $row['answer_text']; ?></li>
 					<?php endwhile; ?>
 										
 				</ul>
-				<input type="submit" value="submit">
+				<button type="submit" class="btn-next" name="register_btn"> Sljedeće pitanje</button>
 				<input type="hidden" name="number" value="<?php echo $number; ?>">
 			</form>
 
 		</div>
 	</main>
-	<footer>
-		<div class="container">
-			Copyright &copy; 2019.
-			
-		</div>
-	</footer>
+	
 </body>
 </html>

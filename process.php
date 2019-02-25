@@ -1,8 +1,7 @@
 
-
 <?php include('functions.php') ?>
 <?php
-//check score
+//provjera rezultata
 if (!isset($_SESSION['score'])) {
 	$_SESSION['score'] = 0;
 }
@@ -12,32 +11,24 @@ if ($_POST) {
 	$selected_choice = $_POST['answer'];
 	$next = $number+1;
 
-	//get total question
+//odabiranje samo 10 odgovora
 
 	$query ="SELECT * FROM `questions` LIMIT 10";
 	$results = mysqli_query($db, $query);
 	$total= mysqli_num_rows($results);
 	$rand_question_number = $next;
 
+//dobivanje točnog odgovora
 
-
-
-	//get correct choice
-
-	$query = "SELECT * from `answers` where question_number = $number and is_correct = 1";
-
-	//get result
+	$query = "SELECT * from `answers` where question_number = $rand_question_number and is_correct = 1";
 	$result = mysqli_query($db, $query);
-
-	//get row
 	$row= mysqli_fetch_assoc($result);
-
-	//set correct choice
 	$correct_choice = $row['answer_id'];
 
-	//compare
+//uspoređivanje točnog sa odabranim
 	if ($correct_choice == $selected_choice) {
-		//correct answer
+
+//pribrajanje točnih odgovora
 		$_SESSION['score']++;
 	}
 		if ($number == $total) {
@@ -45,9 +36,6 @@ if ($_POST) {
 			exit();
 		} else {
 			header("Location: start_quiz.php?n=".$next);
-
-		}
-		
+		}	
 }
-
 ?>

@@ -39,22 +39,8 @@ if (isset($_GET['logout'])) {
 		
 	</div>
 	<div class="content-admin-home">
-		<!-- notification message -->
-		<!-- <?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success" >
-				<h3>
-					<?php 
-						echo $_SESSION['success']; 
-						unset($_SESSION['success']);
-					?>
-				</h3>
-			</div>
-		<?php endif ?> --> 
-
-		<!-- logged in user information -->
 		<div class="profile_info">
 			<img src="../admin/admin_profile.png"  >
-
 			<div>
 				<?php  if (isset($_SESSION['user'])) : ?>
 					<strong><?php echo $_SESSION['user']['username']; ?></strong>
@@ -63,13 +49,17 @@ if (isset($_GET['logout'])) {
 						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
 						<br>
 						<a href="home.php?logout='1'" style="color: red;">odjavi se</a>
-                       &nbsp; <a href="create_user.php"> + dodaj novog korisnika</a>
-                        &nbsp; <a href="add_questions.php"> + dodaj nova pitanja</a>
 					</small>
-
 				<?php endif ?>
 			</div>
 		</div>
+		<div class="admin-home-task">
+				<h4>Što želite napraviti?</h4>
+				<ul class="admin-task-ul">
+					<li><a href="create_user.php">Dodati novog korisnika</a></li>
+					<li><a href="add_questions.php">Dodati nova pitanja</a></li>  
+			</div>
+			<div class="admin-start"><a href="../start_quiz.php?n=1" style="color: white;">Započni kviz</a></div>
 	</div>
 </body>
 </html>

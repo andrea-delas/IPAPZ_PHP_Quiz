@@ -14,9 +14,10 @@ if ($_POST) {
 
 	//get total question
 
-	$query ="SELECT * FROM `questions` ";
+	$query ="SELECT * FROM `questions` LIMIT 10";
 	$results = mysqli_query($db, $query);
 	$total= mysqli_num_rows($results);
+	$rand_question_number = $next;
 
 
 

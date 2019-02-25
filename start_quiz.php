@@ -6,13 +6,15 @@
 
 $number = (int) $_GET['n'];
 
-$query = "SELECT * FROM `questions` WHERE question_number = $number";
+
+$query = "SELECT * FROM `questions` order by rand()";
 $result = mysqli_query($db, $query);
 $question= mysqli_fetch_assoc($result);
+$rand_question_number = $question['question_number'];
 
-$query = "SELECT * FROM `answers` WHERE question_number = $number";
+
+$query = "SELECT * FROM `answers` WHERE question_number = $rand_question_number";
 $answers = mysqli_query($db, $query);
-
 
 ?>
 

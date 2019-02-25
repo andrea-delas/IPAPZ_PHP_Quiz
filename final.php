@@ -20,7 +20,7 @@
 			<h2>You're done</h2>
 			<p>Congrats! You've done the test!</p>
 			<p>Final score: <?php echo $_SESSION['score']; ?></p>
-			<a href="start_quiz.php?n=1" <?php session_destroy(); ?> class="start">Započni kviz</a>
+			<a href="start_quiz.php?n=1" <?php session_destroy();?> class="start">Započni kviz</a>
 
 		</div>
 	</main>

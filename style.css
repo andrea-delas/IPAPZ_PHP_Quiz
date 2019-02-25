@@ -4,32 +4,112 @@
 }
 body {
   font-size: 120%;
-  background: #F8F8FF;
+  background-image: url("idea2.jpg");
+}
+.content-wrap {
+  width: 45%;
+  float: left;
+}
+.content-wrap-home {
+  width: 100%;
+
+}
+.welcome {
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 500px;
+
+}
+.welcome h2 {
+  font-family: "Palatino Linotype";
+  padding: 10px;
+  font-size: 50px;
+  color:  white;
+  letter-spacing: 1px;
+}
+.welcome p {
+  font-family: "Trebuchet MS";
+  font-size: 30px;
+  color: white;
 }
 
 .header {
   width: 40%;
-  margin: 50px auto 0px;
+  margin-top: 330px;
+  margin-left: 100px;
   color: white;
-  background: #5F9EA0;
+  background: #1C1B20;
   text-align: center;
-  border: 1px solid #B0C4DE;
+  border: 1px solid black;
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
 }
+
+.header-home {
+  width: 65%;
+  margin: auto;
+  margin-top: 100px;
+  color: white;
+  background: #1C1B20;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+.header-home h2, p{
+  text-align: center;
+}
+.header-admin-home {
+  width: 40%;
+  margin: auto;
+  margin-top: 100px;
+  color: white;
+  background: #1C1B20;
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+.header-admin-home h2 {
+  text-align: center;
+}
 form, .content {
   width: 40%;
-  margin: 0px auto;
+  margin-left: 100px;
   padding: 20px;
-  border: 1px solid #B0C4DE;
-  background: white;
+  border: 1px solid black;
+  background:   #83847F;
   border-radius: 0px 0px 10px 10px;
+}
+.content-home {
+  width: 65%;
+   display: flex;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid black;
+  background: white;
+    
+  border-radius: 0px 0px 10px 10px;
+}
+.content-admin-home {
+  width: 40%;
+   display: flex;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid black;
+  background: white;
+    
+  border-radius: 0px 0px 10px 10px;
+}
+form p a {
+  color: white;
 }
 .input-group {
   margin: 10px 0px 10px 0px;
 }
 .input-group label {
+  font-size: 20px;
   display: block;
   text-align: left;
   margin: 3px;
@@ -42,16 +122,51 @@ form, .content {
   border-radius: 5px;
   border: 1px solid gray;
 }
-.input-group a {
+
+.input-group-home a {
+  margin-top: 50px;
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #5F9EA0;
+  background: #1C1B20;
   border: none;
   border-radius: 5px;
 }
 .input_group p {
   font-size: 50px;
+}
+.input-group-home p {
+  text-align: justify;
+  padding: 10px;
+}
+.input-group-home table {
+margin-left: 30px;
+margin-right: 30px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+.input-group-home table tr td {
+  border-bottom: solid 1px;
+}
+.input-group-home table tr:last-child td {
+  border-bottom: none;
+}
+
+.input-group-home td {
+  padding: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.image {
+  width: 45%;
+  float: right;
+}
+
+.image img {
+   margin-top: 200px;
+  width: 800px;
+  height: 600px;
 }
 #user_type {
   height: 40px;
@@ -63,13 +178,32 @@ form, .content {
   border: 1px solid gray;
 }
 
+.start {
+  margin-bottom: 50px;
+  margin-left: 800px;
+}
+.start a {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background: #1C1B20;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+
+
+}
+
 .btn {
   padding: 10px;
   font-size: 15px;
   color: white;
-  background: #5F9EA0;
+  background: #1C1B20;
   border: none;
   border-radius: 5px;
+}
+
+
 }
 .error {
   width: 92%; 
@@ -92,12 +226,15 @@ form, .content {
   width: 50px; 
   height: 50px; 
   margin: 5px;
+  margin-top: 20px;
   float: left;
 }
 .profile_info div {
   display: inline-block; 
-  margin: 5px;
+  
+    margin-top: 20px;
 }
+
 .profile_info:after {
   content: "";
   display: block;

@@ -28,12 +28,19 @@ if (isset($_GET['logout'])) {
 	</style>
 </head>
 <body>
-	<div class="header">
-		<h2>Admin - Home Page</h2>
+	<div class="welcome">
+    <h2>Dobrodošli na PHP Quiz</h2>
+    <p> Provjerite svoje znanje iz PHP programskog jezika </p>
+  </div>
+	<div class="header-admin-home">
+		<h2>Pozdrav, <?php echo $_SESSION['user']['username']; ?>!</h2>
+		<p>PHP Quiz - admin stranica</p>
+		
+		
 	</div>
-	<div class="content">
+	<div class="content-admin-home">
 		<!-- notification message -->
-		<?php if (isset($_SESSION['success'])) : ?>
+		<!-- <?php if (isset($_SESSION['success'])) : ?>
 			<div class="error success" >
 				<h3>
 					<?php 
@@ -42,7 +49,7 @@ if (isset($_GET['logout'])) {
 					?>
 				</h3>
 			</div>
-		<?php endif ?>
+		<?php endif ?> --> 
 
 		<!-- logged in user information -->
 		<div class="profile_info">
@@ -55,9 +62,9 @@ if (isset($_GET['logout'])) {
 					<small>
 						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
 						<br>
-						<a href="home.php?logout='1'" style="color: red;">logout</a>
-                       &nbsp; <a href="create_user.php"> + add user</a>
-                        &nbsp; <a href="add_questions.php"> + add questions</a>
+						<a href="home.php?logout='1'" style="color: red;">odjavi se</a>
+                       &nbsp; <a href="create_user.php"> + dodaj novog korisnika</a>
+                        &nbsp; <a href="add_questions.php"> + dodaj nova pitanja</a>
 					</small>
 
 				<?php endif ?>
